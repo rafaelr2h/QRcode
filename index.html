@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento de App</title>
+    <script>
+        // Função para detectar o tipo de dispositivo e redirecionar
+        function redirecionar() {
+            var userAgent = navigator.userAgent.toLowerCase();
+
+            // Verificar se é um dispositivo Android
+            if (userAgent.indexOf("android") > -1) {
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.qualityapp.qregistro&pcampaignid=web_share';
+            }
+            // Verificar se é um dispositivo iOS
+            else if (userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipad") > -1) {
+                window.location.href = 'https://apps.apple.com/br/app/qregistro/id1636548988';
+            }
+            // Redirecionar para um link padrão se não for Android ou iOS
+            
+        }
+    </script>
+</head>
+<body onload="redirecionar()">
+    <!-- Conteúdo da página, opcional -->
+    <h1>Redirecionamento de App</h1>
+    <p>Por favor, aguarde enquanto redirecionamos você para o aplicativo...</p>
+</body>
+</html>
